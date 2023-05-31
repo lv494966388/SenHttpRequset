@@ -15,6 +15,7 @@ import java.util.Random;
 @Controller
 public class Test {
 
+
     @ApiOperation(value="测试", notes="测试接口")
     @RequestMapping("test")
     @ResponseBody
@@ -23,6 +24,8 @@ public class Test {
     }
 
     public static void main(String[] args) {
+
+
 
 
     }

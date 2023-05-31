@@ -3,7 +3,7 @@ package com.example.demo.entity;
 import lombok.Data;
 
 @Data
-public class User {
+public class    User {
     private String lang;
     private String password;
     private String region_code;

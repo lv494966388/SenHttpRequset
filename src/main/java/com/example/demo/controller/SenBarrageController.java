@@ -75,13 +75,8 @@ public class SenBarrageController {
         //开始请求登陆
         String s = jsonObject.toString();
 
-
         //拿到Token
         String token = sendPostLogin(s);
-
-
-
-
 
         Barrage barrage = new Barrage();
         barrage.setAccount_token(token);
@@ -92,7 +87,6 @@ public class SenBarrageController {
         barrage.setRegion_code("1");
         barrage.setSrc_channel("guanwang");
 
-
         JSONObject o = (JSONObject) JSONObject.toJSON(barrage);
         //开始发送弹幕
         String s1 = sendDan(o.toString());
@@ -100,10 +94,7 @@ public class SenBarrageController {
         return "任务开始了";
     }
 
-   
-
     /*获取token*/
-    
     public String sendPostLogin(String param){
         String url="https://webapi.leigod.com/api/auth/login";
         String sendPost = sendPost2(url, param);
@@ -131,14 +122,8 @@ public class SenBarrageController {
             }
         }).start();
 
-
 //        System.out.println(sendPost);
        log.info(param);
-
-
-
-
-
         return "操作成功";
     }
 
